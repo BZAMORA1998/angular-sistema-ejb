@@ -4,6 +4,7 @@ package com.angular.sistema.ejb.bo;
 import javax.ejb.Local;
 import javax.validation.constraints.NotNull;
 
+import com.angular.sistema.ejb.dto.AutenticacionDTO;
 import com.angular.sistema.ejb.dto.DatosUsuarioDTO;
 import com.angular.sistema.ejb.exception.BOException;
 import com.angular.sistema.ejb.model.Usuario;
@@ -18,5 +19,7 @@ public interface IUsuarioBO {
 	public void delete(@NotNull int id) throws BOException;
 	
 	public Usuario find(@NotNull int id)  throws BOException;
+
+	public void autenticacion(AutenticacionDTO objAutenticacion) throws BOException;
 
 }

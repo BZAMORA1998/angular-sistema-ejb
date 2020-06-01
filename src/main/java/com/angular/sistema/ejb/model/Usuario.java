@@ -43,8 +43,8 @@ public class Usuario implements Serializable {
 
 	//bi-directional many-to-one association to TipoIdentificacion
 	@ManyToOne
-	@JoinColumn(name="tipo_identificacion")
-	private TipoIdentificacion tipoIdentificacionBean;
+	@JoinColumn(name="id_tipo_identificacion")
+	private TipoIdentificacion tipoIdentificacion;
 
 	public int getIdUsuario() {
 		return idUsuario;
@@ -110,12 +110,12 @@ public class Usuario implements Serializable {
 		this.segundoNombre = segundoNombre;
 	}
 
-	public TipoIdentificacion getTipoIdentificacionBean() {
-		return tipoIdentificacionBean;
+	public TipoIdentificacion getTipoIdentificacion() {
+		return tipoIdentificacion;
 	}
 
-	public void setTipoIdentificacionBean(TipoIdentificacion tipoIdentificacionBean) {
-		this.tipoIdentificacionBean = tipoIdentificacionBean;
+	public void setTipoIdentificacion(TipoIdentificacion tipoIdentificacion) {
+		this.tipoIdentificacion = tipoIdentificacion;
 	}
 
 	
